@@ -3,22 +3,31 @@ package com.example.maze.BEE;
 public class Maze {
     private int rows;
     private int cols;
-    private int[][] map;
+    private int[][] grid;
 
-    public Maze(int rows, int cols){
-
+    public Maze(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
+        this.grid = new int[rows][cols];
     }
 
-    public void setcell(int rows, int cols, int value){
-        map[rows][cols] = value;
+    public void setCell(int row, int col, int value) {
+        grid[row][col] = value;
     }
 
-    public int getCell(int rows, int cols){
-        return map[rows][cols];
+    public int getCell(int row, int col) {
+        return grid[row][col];
     }
-    public int[][] getMap(){
-        return map;
+
+    public int[][] getGrid() {
+        return grid;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getCols() {
+        return cols;
     }
 }

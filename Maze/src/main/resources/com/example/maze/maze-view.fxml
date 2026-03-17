@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.maze.GUI.MazeController">
+
+    <!-- TOP: Generate button -->
+    <top>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Generate Maze"
+                    onAction="#onGenerateMaze"
+                    style="-fx-font-size: 18px; -fx-padding: 10 20 10 20;"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER: Maze grid -->
+    <center>
+        <StackPane>
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <GridPane fx:id="mazeGrid"
+                      hgap="0" vgap="0"
+                      style="-fx-background-color: #e0e0e0; -fx-border-color: #444; -fx-border-width: 2;"/>
+        </StackPane>
+    </center>
+
+</BorderPane>
